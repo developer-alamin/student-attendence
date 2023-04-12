@@ -9,7 +9,8 @@
 				<h5 class="AttencurrentDate">Today : <?php echo now(); ?></h5>
 			</div>
 			<div class="card-body">
-				<form action="{{url('/getattendence')}}" method="">
+				<form action="{{url('/getattendence')}}" method="GET">
+                    @csrf
 					<table class="table table-hover table-bordered table-striped">
 						<thead>
 							<tr>
@@ -26,8 +27,8 @@
 							 	<td>{{ $value->name }}</td>
 							 	<td>{{ $value->roll }}</td>
 							 	<td>
-							 		<input type="radio" class="radio" name="attend[{{ $value->roll }}]" value="present">P
-							 		<input type="radio" class="radio" name="attend[{{ $value->roll }}]" value="Absent">A
+							 		<input type="radio" class="radio" name="attend[$value->id][]" value="present">P
+							 		<input type="radio" class="radio" name="attend[$value->id][]" value="Absent">A
 							 	</td>
 							 </tr>
 						@endforeach()
