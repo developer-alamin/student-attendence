@@ -1,0 +1,28 @@
+/*registration css start form here*/
+button.registration.btn {margin-left: auto;font-weight: bold;letter-spacing: 3px;font-size: 20px;border-radius: 10px;color: #1769ff;text-shadow: 1px 0px 1px #cae4ff;}
+.registerTitle {
+    display: flex;
+    background: #c6cdff;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+}
+.registerTitle h4 {
+    font-family: emoji;
+    color: #6e54ff;
+    font-weight: bold;
+}
+/*registration css end form here*/
+
+
+.modal-header h4.modelregisterTitle {
+    color: #665bff;
+    font-weight: bold;
+    font-family: auto;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+}

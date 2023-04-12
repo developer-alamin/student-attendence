@@ -1,0 +1,193 @@
+
+/*Add Loader animation css start form here*/
+.addLoader {
+    width: 36px;
+    height: 36px;
+    border: 4px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: addLoader 1s linear infinite;
+}
+
+  @keyframes addLoader {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+/*Add Loader animation css end form here*/
+/*Display Loader animation css start form here*/
+span.DisplayLoader {
+  width: 32px;
+  height: 90px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50% 50% 0 0;
+  border-bottom: 10px solid #ff6737;
+  background-color: #96ef35;
+  background-image: radial-gradient(ellipse at center, #4716c3 34%, #28ff01 35%, #324a35 54%, #c086ff 55%), linear-gradient(#ff0c00 10px, transparent 0);
+  background-size: 28px 28px;
+  background-position: center 20px , center 2px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: employeeanimloaderBack 1s linear infinite alternate;
+}
+span.DisplayLoader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0px 15px #FF3D00 inset;
+  top: 67px;
+}
+span.DisplayLoader::after {
+  content: '';  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 34px;
+  height: 34px;
+  top: 112%;
+  background: radial-gradient(ellipse at center, #ffdf00 8%, rgba(249, 62, 0, 0.6) 24%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 50% 50% 0;
+  background-repeat: no-repeat;
+  background-position: -44px -44px;
+  background-size: 100px 100px;
+  box-shadow: 4px 4px 12px 0px rgba(255, 61, 0, 0.5);
+  box-sizing: border-box;
+  animation: employeeanimloader 1s linear infinite alternate;
+}
+
+@keyframes employeeanimloaderBack {
+  0%, 30%, 70% {
+    transform: translateY(0px);
+  }
+  20%, 40%, 100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes employeeanimloader {
+  0% {
+    box-shadow: 4px 4px 12px 2px rgba(255, 61, 0, 0.75);
+    width: 34px;
+    height: 34px;
+    background-position: -44px -44px;
+    background-size: 100px 100px;
+  }
+  100% {
+    box-shadow: 2px 2px 8px 0px rgba(255, 61, 0, 0.5);
+    width: 30px;
+    height: 28px;
+    background-position: -36px -36px;
+    background-size: 80px 80px;
+  }
+}
+/*Display Loader animation css end form here*/
+
+/*Display Update loader animation css start form here*/
+span.UpDisplayLoader {
+  width: 32px;
+  height: 90px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50% 50% 0 0;
+  border-bottom: 10px solid #ff6737;
+  background-color: #96ef35;
+  background-image: radial-gradient(ellipse at center, #4716c3 34%, #28ff01 35%, #324a35 54%, #c086ff 55%), linear-gradient(#ff0c00 10px, transparent 0);
+  background-size: 28px 28px;
+  background-position: center 20px , center 2px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: employeeanimloaderBack 1s linear infinite alternate;
+}
+span.UpDisplayLoader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0px 15px #FF3D00 inset;
+  top: 67px;
+}
+span.UpDisplayLoader::after {
+  content: '';  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 34px;
+  height: 34px;
+  top: 112%;
+  background: radial-gradient(ellipse at center, #ffdf00 8%, rgba(249, 62, 0, 0.6) 24%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 50% 50% 0;
+  background-repeat: no-repeat;
+  background-position: -44px -44px;
+  background-size: 100px 100px;
+  box-shadow: 4px 4px 12px 0px rgba(255, 61, 0, 0.5);
+  box-sizing: border-box;
+  animation: employeeanimloader 1s linear infinite alternate;
+}
+
+@keyframes employeeanimloaderBack {
+  0%, 30%, 70% {
+    transform: translateY(0px);
+  }
+  20%, 40%, 100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes employeeanimloader {
+  0% {
+    box-shadow: 4px 4px 12px 2px rgba(255, 61, 0, 0.75);
+    width: 34px;
+    height: 34px;
+    background-position: -44px -44px;
+    background-size: 100px 100px;
+  }
+  100% {
+    box-shadow: 2px 2px 8px 0px rgba(255, 61, 0, 0.5);
+    width: 30px;
+    height: 28px;
+    background-position: -36px -36px;
+    background-size: 80px 80px;
+  }
+}
+/*Display Update loader animation css end form here*/
+
+/*login loader animation css start form here*/
+.loginLoader {
+  width: 29px;
+  height: 29px;
+  border: 5px solid;
+  border-color: #FF3D00 #2ae57ecf;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: loginLoader 1s linear infinite;
+}
+
+@keyframes loginLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+   
+/*login loader animation css end form here*/

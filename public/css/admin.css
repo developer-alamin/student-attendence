@@ -1,0 +1,63 @@
+/*admin site css start form here*/
+.CategoryDiv {
+    background: #5e5555;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: auto;
+    color: #979797;
+}
+a.nav-link.beforeNav:hover {
+    background: #7e7676;
+    margin-bottom: 2px;
+    border-left: 4px solid #56ff00;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all cubic-bezier(0.43, 0.26, 0.57, 1.07) 0.2s;
+}
+
+button.addBtn.btn {
+    float: right;
+    font-weight: bold;
+    color: #2e96ef;
+}
+
+strong {
+    color: #2fbb53;
+    font-size: 24px;
+}
+
+label{
+    font-weight: bolder;
+}
+
+div.nothingData{
+    text-align: center;
+}
+
+
+i.fa.fa-edit.tdEditIcon {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: blue;
+    width: 50%;
+    font-family: 'FontAwesome';
+    cursor: pointer;
+}
+
+i.fas.fa-trash.tdDeleteIcon {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #d7150b;
+    width: 50%;
+    cursor: pointer;
+}
+
+h5.AttencurrentDate {
+    float: right;
+    color: #001fff;
+    font-weight: bold;
+}
+/*admin site css end form here*/
