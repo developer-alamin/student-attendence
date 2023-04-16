@@ -43,7 +43,7 @@ class crouseController extends Controller
         $data = DB::table('crouse')
         ->leftjoin('depart','crouse.crouseid','=','depart.departid')->get();
 
-    	return $data;
+        return $data;
     }
 
     public function getCrouse(Request $req)
@@ -76,5 +76,7 @@ class crouseController extends Controller
     	$crousedelete = crouseModel::where('id',$req->id)->delete();
     	return $crousedelete;
     }
+
+    
 
 }

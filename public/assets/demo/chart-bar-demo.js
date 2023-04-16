@@ -9,12 +9,12 @@ var ctx = document.getElementById("myBarChart");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: _ychartbardate,
+    labels: _yStudentChatBarmonthKey,
     datasets: [{
       label: "Revenue",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data:_xchartbardate,
+      data:_XStudentchatBarMonthCount,
     }],
   },
   options: {

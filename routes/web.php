@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\siteController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\reportController;
@@ -8,6 +9,11 @@ use App\Http\Controllers\departmentController;
 use App\Http\Controllers\crouseController;
 use App\Http\Controllers\attendenceController;
 use App\Http\Controllers\studentController;
+use App\Http\Controllers\classController;
+/*home Route code start form here*/
+Route::get('/',[siteController::class,'home']);
+Route::post('/userlogin',[siteController::class,'userlogin']);
+/*home Route code end form here*/
 
 /*crouse Route code start form here*/
 Route::post('/createCrouse',[crouseController::class,'createCrouse']);
@@ -36,14 +42,30 @@ Route::post('/deleteStudent',[studentController::class,'deleteStudent']);
 /*Student Route Code end form here*/
 
 /*Attendence Route code start form here*/
-Route::get('/getattendence',[attendenceController::class,'getattendence']);
+Route::get('/getStudentAttend',[attendenceController::class,'getStudentAttend']);
+Route::post('/createAttendence',[attendenceController::class,'createAttendence']);
+Route::get('/getattend',[attendenceController::class,'getattend']);
+Route::post('/attendUpShow',[attendenceController::class,'attendUpShow']);
+Route::post('/attendupdate',[attendenceController::class,'attendupdate']);
+Route::post('/attendDelete',[attendenceController::class,'attendDelete']);
 /*Attendence Route code end form here*/
+/*class Route code start form here*/
+Route::post('/createClass',[classController::class,'createClass']);
+Route::get('/getClass',[classController::class,'getClass']);
+Route::post('/upShowClass',[classController::class,'upShowClass']);
+Route::post('/updateClass',[classController::class,'updateClass']);
+Route::post('/deleteClass',[classController::class,'deleteClass']);
 
+/*class Route code end form here*/
 
 Route::get('test',[adminController::class,'test']);
 
 Route::prefix('admin')->group(function () {
-	Route::get('/',[adminController::class,'home']);
+	Route::get('/',[adminController::class,'home'])->middleware('login');;
+
+	Route::get('addClass',[classController::class,'addClass']);
+	Route::get('viewClass',[classController::class,'viewClass']);
+
 	Route::get('addCrouse',[crouseController::class,'addCrouse']);
 	Route::get('viewCrouse',[crouseController::class,'viewCrouse']);
 
@@ -57,8 +79,10 @@ Route::prefix('admin')->group(function () {
 	Route::get('viewUser',[userController::class,'viewUser']);
 
 	Route::get('addAttenden',[attendenceController::class,'addAttenden']);
+	Route::get('recodeattenden',[attendenceController::class,'recodeattenden']);
 	Route::get('viewAttenden',[attendenceController::class,'viewAttenden']);
+
 	
-	Route::get('viewReport',[reportController::class,'viewReport']);
+	Route::get('/logout',[siteController::class,'logout'])->middleware('login');
 
 });

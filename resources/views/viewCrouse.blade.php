@@ -174,7 +174,6 @@ function CrouseUpdate() {
     var data = new FormData(this);
 
      var updateLoader = "<span class='addLoader'></span>";
-
      $("#updateCrouse").html(updateLoader);
 
 

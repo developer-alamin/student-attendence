@@ -71,6 +71,12 @@
         <script type="text/javascript" src="{{asset('js/axios.min.js')}}"></script>
         {{-- font icon js cdn link start form here --}}
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+         {{-- chart js cdn and file js start form here --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+         @yield('chartScript')
+        <script src="{{asset('assets/demo/chart-area-demo.js')}}"></script>
+        <script src="{{asset('assets/demo/chart-bar-demo.js')}}"></script>
+        {{-- site main js start form here --}}
         {{-- site main js start form here --}}
         <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
         {{-- script file js start form here --}}

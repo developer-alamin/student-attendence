@@ -27,6 +27,18 @@
                     Dashboard
                 </a>
                 <div class="CategoryDiv">Crouse Category</div>
+                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClass" aria-expanded="false" aria-controls="collapseClass">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                    Class
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                 <div class="collapse" id="collapseClass" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link beforeNav" href="{{asset('admin/addClass')}}">Add Class</a>
+                        <a class="nav-link beforeNav" href="{{asset('admin/viewClass')}}">View Class</a>
+                    </nav>
+                </div>
+
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Crouse
@@ -38,7 +50,6 @@
                         <a class="nav-link beforeNav" href="{{asset('admin/viewCrouse')}}">View Crouse</a>
                     </nav>
                 </div>
-                 <div class="CategoryDiv">Department Category</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Department
@@ -62,19 +73,7 @@
                         <a class="nav-link beforeNav" href="{{asset('admin/viewStudent')}}">View Student</a>
                     </nav>
                 </div>
-                <div class="CategoryDiv">Users Managment</div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#usermanag" aria-expanded="false" aria-controls="usermanag">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Users
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="usermanag" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link beforeNav" href="{{asset('admin/addUser')}}">Add Users</a>
-                        <a class="nav-link beforeNav" href="{{asset('admin/viewUser')}}">View Users</a>
-                    </nav>
-                </div>
-                <div class="CategoryDiv">Attendence System</div>
+               
                  <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#attendnce" aria-expanded="false" aria-controls="attendnce">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Attendance
@@ -83,22 +82,21 @@
                 <div class="collapse" id="attendnce" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link beforeNav" href="{{asset('admin/addAttenden')}}">Attendance</a>
+                        <a class="nav-link beforeNav" href="{{asset('admin/recodeattenden')}}">Recode Attendence</a>
                         <a class="nav-link beforeNav" href="{{asset('admin/viewAttenden')}}">View Attendance</a>
-                        
                     </nav>
                 </div>
-                <div class="CategoryDiv">Report Category</div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-controls="report">
+                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#logout" aria-expanded="false" aria-controls="logout">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Report
+                    User
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="report" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="logout" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link beforeNav" href="{{asset('admin/viewReport')}}">View Report</a>
-                        
+                        <a class="nav-link beforeNav" href="{{asset('admin/logout')}}">Logout</a>
                     </nav>
                 </div>
+                
             </div>
         </div>
     </nav>

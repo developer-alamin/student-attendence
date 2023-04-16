@@ -1,11 +1,46 @@
+
+/*lagin page design css start form here*/
+form#loginForm {
+    width: 400px;
+    background-image: radial-gradient(#8987ff, transparent);
+    padding-top: 50px;
+    border-radius: 10px;
+    margin: auto;
+    padding-bottom: 50px;
+    box-shadow: 1px 0px 14px 5px #8987ff;
+}
+
+.loginDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/aa.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button.UserLogin.form-control {
+    font-weight: bold;
+    color: #3300ff;
+    width: 135px;
+    margin: auto;
+    font-size: 21px;
+    border-radius: 3px 40px;
+    cursor: pointer;
+    border: 3px solid #8291ffc4;
+}
+
+/*login page design css end form here*/
 /*admin site css start form here*/
 .CategoryDiv {
     background: #5e5555;
     text-align: center;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     font-family: auto;
-    color: #979797;
+    color: #4dd15d;
 }
 a.nav-link.beforeNav:hover {
     background: #7e7676;
@@ -59,5 +94,62 @@ h5.AttencurrentDate {
     float: right;
     color: #001fff;
     font-weight: bold;
+}
+
+p.present {
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: green;
+    width: 100px;
+    margin: auto;
+}
+
+p.absent {
+    background: red;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    margin: auto;
+    border-radius: 5px;
+}
+thead {
+    background: #79e318;
+    color: white;
+    font-weight: bold;
+}
+img.studentImg{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+i.fa-solid.fa-circle-arrow-right {
+    float: right;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+.card-body.text-center {
+    display: flex;
+}
+
+.card-body.text-center h3 {
+    margin-right: auto;
+    font-family: auto;
+    color: #47ff6f;
+}
+
+.card-body.text-center h4 {
+    font-family: auto;
+    color: #0014ff;
 }
 /*admin site css end form here*/
