@@ -3,7 +3,9 @@
 @section('content')
 <br>
 <div class="homeDiv">
+	{{ session('userKey') }}
 	<div class="cardDiv">
+
 		<div class="row">
 			<div class="col-3 mb-3">
 				<div class="card">
