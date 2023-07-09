@@ -38,6 +38,7 @@
 	<div class="nothingData d-none">
 	  <img src="{{asset('img/404.avif')}}">
 	</div>
+	
 @endsection()
 @section('script')
 <script type="text/javascript">

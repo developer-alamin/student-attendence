@@ -16,11 +16,12 @@
 				<div class="form-group">
 					<div class="col-12">
 						<select class="form-select form-control userClass" id="userClass" name="userClass">
-							<option>--Select Class--</option>
+							<option value="">--Select Class--</option>
 							@foreach($classKey as $class)
 								<option value="{{ $class->class }}">{{ $class->class }}</option>
 							@endforeach()
-						</select>
+						</select><br>
+						<input type="number" name="adminId" id="adminId" class="form-control" placeholder="Type Admin Id">
 						<br>
 						<input type="password" name="userPass" class="userPass form-control" placeholder="Enter User Password">
 						<br>
@@ -47,10 +48,13 @@
 			e.preventDefault();
 
 			var userClass = $("#userClass").val();
+			var adminId = $('#adminId').val();
 			var pass = $(".userPass").val();
 
 			if (userClass == "--Select Class--") {
 				toastr.error("Please User Class");
+			}else if(adminId == ""){
+				toastr.error("Please Admin Id");
 			} else if(pass == false){
 				toastr.error("Please User Password");
 			}else{
@@ -62,14 +66,20 @@
 
 				axios.post(url,data)
 				.then(function(responce) {
-					if (responce.status == 200 && responce.data == 1) {
-						toastr.success('User Login SuccessFully');
+					if(responce.data == 404){
+						toastr.warning('Admin Class And Admin Id Incorrect');
+						setTimeout(function(){
+							$(".UserLogin").html('Login');
+						},300);
+					}else if(responce.data == 1){
+						toastr.success('Success');
 						window.location.href="admin/";
 						setTimeout(function(){
 							$(".UserLogin").html('Login');
-						},1000);
-					} else {
-						toastr.warning('User Login Faild');
+						},300);
+						
+					}else{
+						toastr.warning('Incorrect Password');
 						setTimeout(function(){
 							$(".UserLogin").html('Login');
 						},300);

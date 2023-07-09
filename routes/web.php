@@ -61,7 +61,7 @@ Route::post('/deleteClass',[classController::class,'deleteClass']);
 Route::get('test',[adminController::class,'test']);
 
 Route::prefix('admin')->group(function () {
-	Route::get('/',[adminController::class,'home'])->middleware('login');;
+	Route::get('/',[adminController::class,'home'])->name('login.home')->middleware('login');;
 
 	Route::get('addClass',[classController::class,'addClass']);
 	Route::get('viewClass',[classController::class,'viewClass']);

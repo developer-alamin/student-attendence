@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Session;
+use App\Models\userModel;
 use App\Models\StudentModel;
+use Illuminate\Http\Request;
 
 use App\Models\attendenModel;
+use Illuminate\Support\Facades\DB;
 
 
 class attendenceController extends Controller
@@ -34,9 +36,12 @@ class attendenceController extends Controller
 
     public function getStudentAttend(Request $req)
     {
-
-        $getAttend = StudentModel::all();
+   
+      if (Session::has('userKey')) {
+        $adminId = Session::get('userKey');
+        $getAttend = StudentModel::where('class',$adminId)->get();
         return $getAttend;
+      }
     }
 
     public function createAttendence(Request $req)

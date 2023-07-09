@@ -76,7 +76,7 @@
                  <div class="col-4">
                  	<label for="class">Class</label>
                  	<select class="form-select class" name="class" >
-                 		<option>--Select Class---</option>
+                 		<option value="">--Select Class---</option>
                  		@foreach($classKey as $value)
                  			<option value="{{ $value->class }}">{{ $value->class }}</option>
                  		@endforeach()
@@ -88,7 +88,7 @@
              	<div class="col-4">
              		<label for="crouse">Crouse</label>
              		<select class="form-select crouse" name="crouse" >
-                 		<option>--Select Crouse---</option>
+                 		<option value="">--Select Crouse---</option>
                  		@foreach($crouseKey as $value)
                  			<option value="{{ $value->name }}">{{ $value->name }}</option>
                  		@endforeach()
@@ -97,7 +97,7 @@
              	<div class="col-4">
              		<label for="department">Department</label>
              		<select class="form-select department" name="department" >
-                 		<option>--Select Department---</option>
+                 		<option value="">--Select Department---</option>
                  		@foreach($departKey as $value)
                  			<option value="{{ $value->department }}">{{ $value->department }}</option>
                  		@endforeach()
@@ -149,19 +149,19 @@
 			var crouse = $(".crouse").val();
 			var depart = $(".department").val();
 
-			if (name == false) {
+			if (name == "") {
 				toastr.error('Please Student Name');
-			}else if(date == false){
+			}else if(date == ""){
 				toastr.error('Please Student Date');
-			}else if(roll == false){
+			}else if(roll == ""){
 				toastr.error('Please Student Roll');
-			}else if(mobile == false){
+			}else if(mobile == ""){
 				toastr.error('Please Student Mobile');
-			}else if(classs == false){
+			}else if(classs == ""){
 				toastr.error('Please Student Class');
-			}else if(crouse == false){
+			}else if(crouse == ""){
 				toastr.error('Please Student Crouse');
-			}else if(depart == false){
+			}else if(depart == ""){
 				toastr.error('Please Student Department');
 			}else{
 				var addloader = "<span class='addLoader'></span>";
@@ -186,6 +186,7 @@
 						setTimeout(function() {
 			               $("#addStudent").html('Submit');
 			            },200);
+						location.reload();
 					}else{
 						swal('Sorry','Student Data Added Faild','error');
 						$("#addStudentModal").modal('hide');
@@ -194,6 +195,7 @@
 						setTimeout(function() {
 			               $("#addStudent").html('Submit');
 			            },200);
+						location.reload();
 					}
 				})
 				.catch(function(error) {

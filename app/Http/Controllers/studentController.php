@@ -103,29 +103,20 @@ class studentController extends Controller
          $updateExplode = explode('/', $updatePreImg);
          $updateEnd = end($updateExplode);
          Storage::delete('public/img/'.$updateEnd);
-
-         $update = DB::table("student")->where('id',$req->studentid)->update([
-           'name' => $req->stuName,
-            'roll' => $req->stuUpRoll,
-            'mobile' => $req->upmobile,
-            'class' => $req->upclass,
-            'crouse' => $req->Upcrouse,
-            'depart' => $req->Updepartment,
-            'photo' =>$UpaddFileName,
-            'date'  => $req->stuUpDate
-         ]);
-
       }else{
-         $update = DB::table("student")->where('id',$req->studentid)->update([
-           'name' => $req->stuName,
-            'roll' => $req->stuUpRoll,
-            'mobile' => $req->upmobile,
-            'class' => $req->upclass,
-             'crouse' => $req->Upcrouse,
-            'depart' => $req->Updepartment,
-            'date'  => $req->stuUpDate
-         ]);
+         $UpaddFileName = $req->stuUpImg;
       }
+
+      $update = DB::table("student")->where('id',$req->studentid)->update([
+         'name' => $req->stuName,
+          'roll' => $req->stuUpRoll,
+          'mobile' => $req->upmobile,
+          'class' => $req->upclass,
+          'crouse' => $req->Upcrouse,
+          'depart' => $req->Updepartment,
+          'photo' =>$UpaddFileName,
+          'date'  => $req->stuUpDate
+       ]);
    
        return $update;
    }
